@@ -3,7 +3,7 @@ title   : Why challenges?
 banner  : /img/blog/Photoboxgroup_WhyChallenges_SquareRGB.png
 date    : 2017-12-11
 images  : ["pbx-group-security/static/img/blog/Photoboxgroup_WhyChallenges_SquareRGB.pngg"]
-author      : Dinis Cruz
+authors : ["Dinis Cruz"]
 ---
 
 ## Why challenges?

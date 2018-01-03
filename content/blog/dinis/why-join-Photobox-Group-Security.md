@@ -5,7 +5,7 @@ tags        : ["Photobox", "Team", "Why Photobox", "CISO"]
 categories  : ["Recruitment"]
 banner      : /img/blog/Photoboxgroup_WhyJoinPbxBlogArticle_squareRGB.png
 images      : ["/img/blog/Photoboxgroup_WhyJoinPbxBlogArticle_squareRGB.png"]
-author      : Dinis Cruz
+authors     : ["Dinis Cruz"]
 ---
 
 The Photobox Group represents a really good opportunity for security professionals who want to make a difference and want to take their ideas to the next level. The security team within Photobox Group is in a really privileged position. We have support from all levels of the organisation:
