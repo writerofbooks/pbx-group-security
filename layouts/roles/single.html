@@ -1,93 +1,69 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "content" }}
+<div id="content">
+    <div class="container">
 
-{{ partial "head.html" . }}
-
-<body>
-
-<div id="all">
-
-    <header>
-
-        {{ partial "nav.html" . }}
-
-    </header>
-
-    {{ partial "breadcrumbs.html" . }}
-
-    <div id="content">
-        <div class="container">
-
-            <div class="row">
+        <div class="row">
 
 
-                {{ if .Params.banner }}
-                <img src="{{ .Params.banner }}" class="img-responsive" alt="">
-                {{ end }}
+            {{ if .Params.banner }}
+            <img src="{{ .Params.banner }}" class="img-responsive" alt="">
+            {{ end }}
 
-                <!-- *** LEFT COLUMN *** -->
+            <!-- *** LEFT COLUMN *** -->
 
-                <div class="col-md-12" id="blog-post">
+            <div class="col-md-12" id="blog-post">
 
-                    <a href="/roles/"> back to all roles</a>
-                    <hr/>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th> Contract Type </th>
-                                <th> Location </th>
-                                <th> Apply </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{ .Params.contract_type }}</td>
-                                <td>{{ .Params.location }}</td>
-                                <td>
-                                    {{ if .Params.apply_link}}
-                                        <a href="{{ .Params.apply_link }}">here</a>
-                                    {{ end }}
-                                </td>
+                <a href="/roles/"> back to all roles</a>
+                <hr/>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Contract Type </th>
+                            <th> Location </th>
+                            <th> Apply </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ .Params.contract_type }}</td>
+                            <td>{{ .Params.location }}</td>
+                            <td>
+                                {{ if .Params.apply_link}}
+                                    <a href="{{ .Params.apply_link }}">here</a>
+                                {{ end }}
+                            </td>
 
-                            </tr>
-                        </tbody>
+                        </tr>
+                    </tbody>
 
-                    </table>
+                </table>
 
-                    <div id="post-content">
-                        {{ .Content }}
+                <div id="post-content">
+                    {{ .Content }}
 
-                        {{ with .Site.GetPage "page" "roles/_text/_why-join-pbx.md" }}{{ .Content }}{{ end }}
-                        {{ with .Site.GetPage "page" "roles/_text/_how-to-apply.md" }}{{ .Content }}{{ end }}
-                    </div>
-
-                    <!-- /#post-content -->
-                    {{ if .Site.DisqusShortname }}
-                    <div id="comments">
-                        {{ template "_internal/disqus.html" . }}
-                    </div>
-                    {{ end }}
-
+                    {{ with .Site.GetPage "page" "roles/_text/_why-join-pbx.md" }}{{ .Content }}{{ end }}
+                    {{ with .Site.GetPage "page" "roles/_text/_how-to-apply.md" }}{{ .Content }}{{ end }}
                 </div>
 
-                <!--<div class="col-md-3">
-                    {{ partial "sidebar.html" . }}
-                </div> -->
+                <!-- /#post-content -->
+                {{ if .Site.DisqusShortname }}
+                <div id="comments">
+                    {{ template "_internal/disqus.html" . }}
+                </div>
+                {{ end }}
 
             </div>
-            <!-- /.row -->
+
+            <!--<div class="col-md-3">
+                {{ partial "sidebar.html" . }}
+            </div> -->
 
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
+
     </div>
-    <!-- /#content -->
-
-    {{ partial "footer.html" . }}
-
+    <!-- /.container -->
 </div>
-<!-- /#all -->
+<!-- /#content -->
 
-{{ partial "scripts.html" . }}
-
-</body>
-</html>
+{{ end }}

@@ -1,89 +1,65 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "content" }}
+<div id="content">
+  <div class="container">
+    <div class="row">
 
-  {{ partial "head.html" . }}
+      <main>
+        <div>
+          <p>{{ .Content }} </p>
 
-  <body>
+          <h2>Permanent Positions</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th> Role           </th>
+                <th> Contract Type  </th>
+                <th> Location       </th>
+                <th> Apply          </th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range where .Data.Pages "Params.contract_type" "Permanent" }}
+              {{ if ne .Params.hide true}}
+              <tr>
+                {{ partial "roles/contract_td.html" . }}
+              </tr>
+              {{ end}}
+              {{ end }}
+            </tbody>
 
-    <div id="all">
+          </table>
 
-        <header>
+          <h2>Contract Positions</h2>
 
-          {{ partial "nav.html" . }}
+          <table class="table">
+            <thead>
+              <tr>
+                <th> Role           </th>
+                <th> Contract Type  </th>
+                <th> Location       </th>
+                <th> Apply          </th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range where .Data.Pages "Params.contract_type" "Contractor" }}
+              <tr>
+                {{ partial "roles/contract_td.html" . }}
+              </tr>
+              {{ end }}
+            </tbody>
 
-        </header>
+          </table>
 
-        {{ partial "breadcrumbs.html" . }}
-
-        <div id="content">
-            <div class="container">
-                <div class="row">
-
-                    <main>
-                        <div>
-                            <p>{{ .Content }} </p>
-
-                            <h2>Permanent Positions</h2>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th> Role           </th>
-                                    <th> Contract Type  </th>
-                                    <th> Location       </th>
-                                    <th> Apply          </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {{ range where .Data.Pages "Params.contract_type" "Permanent" }}
-                                    {{ if ne .Params.hide true}}
-                                        <tr>
-                                            {{ partial "roles/contract_td.html" . }}
-                                        </tr>
-                                    {{ end}}
-                                {{ end }}
-                                </tbody>
-
-                            </table>
-
-                            <h2>Contract Positions</h2>
-
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th> Role           </th>
-                                    <th> Contract Type  </th>
-                                    <th> Location       </th>
-                                    <th> Apply          </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {{ range where .Data.Pages "Params.contract_type" "Contractor" }}
-                                <tr>
-                                    {{ partial "roles/contract_td.html" . }}
-                                </tr>
-                                {{ end }}
-                                </tbody>
-
-                            </table>
-
-                        </div>
-                    </main>
-
-                    <hr/>
-
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
         </div>
-        <!-- /#content -->
+      </main>
 
-        {{ partial "footer.html" . }}
+      <hr/>
 
     </div>
-    <!-- /#all -->
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /#content -->
 
-    {{ partial "scripts.html" . }}
-
-  </body>
-</html>
+{{ end }}

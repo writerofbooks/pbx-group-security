@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+
+{{ block "header" . }}{{ partial "head.html" . }}{{ end }}
+
+<body>
+  <div id="all">
+    <header>
+      {{ block "nav" . }}{{ partial "nav.html" . }}{{ end }}
+    </header>
+
+    {{ block "breadcrumbs" . }}{{ partial "breadcrumbs.html" . }}{{ end }}
+
+    {{ block "wide" . }}{{ end }}
+
+    <main role="main" class="container">
+      {{ block "test" . }}{{ end }}
+      {{ block "content" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+
+  </div>
+
+  {{ block "scripts" . }}{{- partial "scripts.html" . -}}{{ end }}
+</body>
+</html>

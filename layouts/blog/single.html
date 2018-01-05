@@ -1,77 +1,53 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "content" }}
+<div id="content">
+    <div class="container">
 
-  {{ partial "head.html" . }}
+        <div class="row">
 
-  <body>
+            <!-- *** LEFT COLUMN *** -->
 
-    <div id="all">
+            <div class="col-md-9" id="blog-post">
 
-        <header>
+                <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}{{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
 
-          {{ partial "nav.html" . }}
+                <div id="post-content">
+                  {{ .Content }}
 
-        </header>
-
-        {{ partial "breadcrumbs.html" . }}
-
-        <div id="content">
-            <div class="container">
-
-                <div class="row">
-
-                    <!-- *** LEFT COLUMN *** -->
-
-                    <div class="col-md-9" id="blog-post">
-
-                        <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}{{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
-
-                        <div id="post-content">
-                          {{ .Content }}
-
-			  {{ partial "edit-link.html" . }}
-                        </div>
-                        <!-- /#post-content -->
-                        {{ if .Site.DisqusShortname }}
-                        <div id="comments">
-                            {{ template "_internal/disqus.html" . }}
-                        </div>
-                        {{ end }}
-
-                    </div>
-                    <!-- /#blog-post -->
-
-                    <!-- *** LEFT COLUMN END *** -->
-
-                    <!-- *** RIGHT COLUMN *** -->
-
-                    <div class="col-md-3">
-
-                        <!-- *** MENUS AND WIDGETS *** -->
-
-                        {{ partial "sidebar.html" . }}
-
-                        <!-- *** MENUS AND FILTERS END *** -->
-
-                    </div>
-                    <!-- /.col-md-3 -->
-
-                    <!-- *** RIGHT COLUMN END *** -->
-
+{{ partial "edit-link.html" . }}
                 </div>
-                <!-- /.row -->
+                <!-- /#post-content -->
+                {{ if .Site.DisqusShortname }}
+                <div id="comments">
+                    {{ template "_internal/disqus.html" . }}
+                </div>
+                {{ end }}
 
             </div>
-            <!-- /.container -->
-        </div>
-        <!-- /#content -->
+            <!-- /#blog-post -->
 
-        {{ partial "footer.html" . }}
+            <!-- *** LEFT COLUMN END *** -->
+
+            <!-- *** RIGHT COLUMN *** -->
+
+            <div class="col-md-3">
+
+                <!-- *** MENUS AND WIDGETS *** -->
+
+                {{ partial "sidebar.html" . }}
+
+                <!-- *** MENUS AND FILTERS END *** -->
+
+            </div>
+            <!-- /.col-md-3 -->
+
+            <!-- *** RIGHT COLUMN END *** -->
+
+        </div>
+        <!-- /.row -->
 
     </div>
-    <!-- /#all -->
+    <!-- /.container -->
+</div>
+<!-- /#content -->
 
-    {{ partial "scripts.html" . }}
-
-  </body>
-</html>
+{{ end }}

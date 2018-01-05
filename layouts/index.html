@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "nav" }}{{ end }}
+{{ define "breadcrumbs" }}<!-- No breadcrumbs here -->{{ end }}
 
-  {{ partial "head.html" . }}
-
-  <body>
-        <header>
-
-          {{ partial "nav.html" . }}
-
-        </header>
+{{ define "wide" }}
 
         {{ partial "carousel.html" . }}
 
@@ -18,12 +11,4 @@
 
         {{ partial "recent_posts.html" . }}
 
-        {{ partial "footer.html" . }}
-
-    </div>
-    <!-- /#all -->
-
-    {{ partial "scripts.html" . }}
-
-  </body>
-</html>
+{{ end }}
