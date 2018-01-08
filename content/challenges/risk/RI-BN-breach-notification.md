@@ -2,8 +2,8 @@
 title     : GDPR Breach Notification to EU Regulator
 key       : RI-BN
 level     : one
-difficulty: medium
-skills    : GDPR knowledge
+difficulty: expert
+skills    : GDPR Knowledge, Regulations, Written Ability
 area      : risk
 ---
 
@@ -15,7 +15,7 @@ Write an GDPR breach notification letter to one of the EU Regulator (for example
  - Non-opted in customers received marketing communications
  - ... Another scenario that you have personal/professional experience in....
 
-### Notes
+**Notes**
 
  - You have creative license to expand the chosen scenarios
  - You can chose an EU Regulator from one of the four companies the Photobox Group operates

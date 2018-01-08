@@ -2,8 +2,8 @@
 title       : AWS Root Key
 key         : TE-AW
 area        : technical
-difficulty  : hard
-skills      : TBC
+difficulty  : expert
+skills      : AWS, Security, Data Protection
 ---
 
 A legacy SVN server is found to be exposed on the internet Review of the source code identifies a number of secrets:

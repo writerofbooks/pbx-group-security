@@ -1,9 +1,9 @@
 ---
 title       : Lambda - Stop EC2 Instances
-key         : TE-LE
+key         : PR-LE
 area        : programming
 difficulty  : hard
-skills      : TBC
+skills      : AWS, Logs, Programming, Analysis
 ---
 
 Create Lambda function to;

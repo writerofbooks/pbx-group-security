@@ -43,15 +43,20 @@ facebook = ""
     weight = 3
 
 [[menu.main]]
+    name = "For Recruiters"
+    url  = "/recruiters/"
+    weight = 4
+
+[[menu.main]]
     name = "Challenges"
     identifier = "challenges"
     url  = "/challenges/"
-    weight = 4
+    weight = 5
 
 [[menu.main]]
     name = "Blog"
     url  = "/blog/"
-    weight = 5
+    weight = 6
 
 #[[menu.main]]
 #    name = "Dev"
@@ -61,7 +66,7 @@ facebook = ""
 [[menu.main]]
     name = "Contact"
     url  = "/page/contact/"
-    weight = 6
+    weight = 7
 
 # Top bar social links menu
 
@@ -112,7 +117,7 @@ facebook = ""
     email = "project-cx@photobox.com"
 
     about_us = "<p>Photobox Group is Europe's leading digital consumer service for personalised products and gifts and parent of the Photobox, Moonpig, Hofmann and posterXXL brands.<p>"
-    copyright = "Copyright (c) 2017, Photobox Group Security; all rights reserved."
+    copyright = '&copy; 2018, Photobox Group Security. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.'
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"

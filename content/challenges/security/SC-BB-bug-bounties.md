@@ -2,8 +2,8 @@
 title       : Bug Bounties
 key         : SE-BB
 area        : security
-difficulty  : hard
-skills      : Security Research
+difficulty  : expert
+skills      : Security Research, Vulnerability Discovery, Outreach
 ---
 
 Tell us about bug-bounty rewards you've received:
